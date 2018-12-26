@@ -57,13 +57,13 @@ keep_probability:  0.5
 
 I included some figures..
 
-![example 1](./example1.png)
-![example 2](./example2.png)
-![example 3](./example3.png)
-![example 4](./example4.png)
-![example 5](./example5.png)
-![example 6](./example6.png)
-![example 7](./example7.png)
+![example 1](example1.png)
+![example 2](example2.png)
+![example 3](example3.png)
+![example 4](example4.png)
+![example 5](example5.png)
+![example 6](example6.png)
+![example 7](example7.png)
 
 ### Submission
 1. Ensure you've passed all the unit tests.
