@@ -19,23 +19,51 @@ You may also need [Python Image Library (PIL)](https://pillow.readthedocs.io/) f
 ##### Dataset
 Download the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip).  Extract the dataset in the `data` folder.  This will create the folder `data_road` with all the training a test images.
 
-### Start
+### My Work
 ##### Implement
-Implement the code in the `main.py` module indicated by the "TODO" comments.
-The comments indicated with "OPTIONAL" tag are not required to complete.
+My code was implemented in `main.py` module for the following changes...
+
+load_vgg:  line 23
+layers:  line 55
+optimize: line 128
+train_nn: line 150
+run:  line 195
+
+My implementation followed the Q&A video made available as part of the project
+definition module.  My implementation uses the VGG network as the encoder and
+implements decoder using Tensorflow's conv2d_transpose for upsampling and 
+1x1 convolution.   In addition, VGG's fully connected layer was replaced with
+a fully convolutional layer.
+
+I also implmented some timing printouts as part of reporting for this project.
 ##### Run
 Run the following command to run the project:
 ```
 python main.py
 ```
-**Note:** If running this in Jupyter Notebook system messages, such as those regarding test status, may appear in the terminal rather than the notebook.
 
 #### Example Outputs
-Here are examples of a sufficient vs. insufficient output from a trained network:
+The network was tested initially using 5 epocs and batch size of 5 in order to test
+out the code to ensure it worked. This was important for development as I ran on
+an Amazon AWS GPU instance, so I didn't want testing to run for too long because
+it would end up costing more money for longer compute times during testing cycles.
 
-Sufficient Result          |  Insufficient Result
-:-------------------------:|:-------------------------:
-![Sufficient](./examples/sufficient_result.png)  |  ![Insufficient](./examples/insufficient_result.png)
+My final version used 30 epocs and batch size of 10.  The complete meta information
+is as follows
+
+epocs: 30
+batch size:  10
+keep_probability:  0.5
+
+I included some figures..
+
+![example 1](./example1.png)
+![example 2](./example2.png)
+![example 3](./example3.png)
+![example 4](./example4.png)
+![example 5](./example5.png)
+![example 6](./example6.png)
+![example 7](./example7.png)
 
 ### Submission
 1. Ensure you've passed all the unit tests.
